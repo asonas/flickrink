@@ -1,21 +1,20 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe "photos/show" do
+RSpec.describe "photos/show", :type => :view do
   before(:each) do
-    @photo = assign(:photo, stub_model(Photo,
+    @photo = assign(:photo, Photo.create!(
       :nsid => "Nsid",
       :username => "Username",
-      :description => "Description",
+      :description => "MyText",
       :url => "Url"
     ))
   end
 
   it "renders attributes in <p>" do
     render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Nsid/)
-    rendered.should match(/Username/)
-    rendered.should match(/Description/)
-    rendered.should match(/Url/)
+    expect(rendered).to match(/Nsid/)
+    expect(rendered).to match(/Username/)
+    expect(rendered).to match(/MyText/)
+    expect(rendered).to match(/Url/)
   end
 end

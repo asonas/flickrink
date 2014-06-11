@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', ">= 3.0.0"
   gem 'spring'
   gem 'sqlite3'
 end
