@@ -10,6 +10,7 @@ class CreatePhotos < ActiveRecord::Migration
       t.text :title
       t.text :description
       t.string :url
+      t.string :url_b
 
       t.timestamps
     end

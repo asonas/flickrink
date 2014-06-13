@@ -35,7 +35,8 @@ class Photo < ActiveRecord::Base
         username: photo.owner.username,
         title: photo.title,
         description: photo.description,
-        url: url
+        url: url,
+        url_b: FlickRaw.url_b(p)
       )
     end
   end
