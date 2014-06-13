@@ -1,5 +1,5 @@
 $ ->
-  dispatcher = new WebSocketRails("ws://localhost:3000/websocket")
+  dispatcher = new WebSocketRails("ws://#{gon.ws_host}/websocket")
   channel = dispatcher.subscribe("streaming")
   channel.bind "replace", (photo) ->
     target = $(".photo[data-position=#{photo.position}]").parents(".js-photo-inner")

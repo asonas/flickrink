@@ -3,6 +3,12 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     @photos = Photo.where(rotation: 0).sample 9
+    gon.ws_host = case Rails.env
+    when "production"
+      "flickrink.herokuapp.com"
+    when "development"
+      "localhost:3000"
+    end
   end
 
   def replace
