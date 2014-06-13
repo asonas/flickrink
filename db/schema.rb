@@ -11,12 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610145033) do
+ActiveRecord::Schema.define(version: 20140611100040) do
 
   create_table "photos", force: true do |t|
-    t.string   "nsid"
+    t.integer  "flickr_photo_id"
+    t.integer  "server_id"
+    t.integer  "rotation"
+    t.string   "secret"
+    t.string   "owner_id"
     t.string   "username"
-    t.string   "description"
+    t.text     "description"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.all
+    @photos = Photo.where(rotation: 0).sample 9
   end
 
   # GET /photos/1

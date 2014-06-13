@@ -1,0 +1,4 @@
+.row.photos-inner
+  - photos.each do |photo|
+    .col-md-4
+      = image_tag photo.url, class: "photo", "data-photo-rotation" => photo.rotation, "data-photo-id" => photo.id

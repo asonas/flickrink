@@ -1,27 +1,5 @@
 h1 Listing photos
-
-table
-  thead
-    tr
-      th Nsid
-      th Username
-      th Description
-      th Url
-      th
-      th
-      th
-
-  tbody
-    - @photos.each do |photo|
-      tr
-        td = photo.nsid
-        td = photo.username
-        td = photo.description
-        td = photo.url
-        td = link_to 'Show', photo
-        td = link_to 'Edit', edit_photo_path(photo)
-        td = link_to 'Destroy', photo, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Photo', new_photo_path
+.container
+  .photos
+    - @photos.each_slice(3) do |photos|
+      = render partial: "photos/row", as: :photos, object: photos
