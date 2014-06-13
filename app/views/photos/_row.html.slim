@@ -1,7 +1,8 @@
 .row.photos-container
-  - photos.each do |photo|
-    .col-sm-4.photo-inner
-      .trimming
-        = image_tag photo.url, class: "photo", "data-photo-rotation" => photo.rotation, "data-photo-id" => photo.id
-      .pane
-        = photo.username
+  - photos.each_with_index do |photo, index|
+    - index += 1
+    .col-sm-4.photo-inner.js-photo-inner
+      .trimming.clickable.js-replace-photo
+        = image_tag photo.url, class: "photo", "data-photo-rotation" => photo.rotation, "data-photo-id" => photo.id, "data-position" => index + (count * 3)
+      .pane.js-username
+        | photo by #{photo.username}

@@ -1,4 +1,6 @@
 .container
   .photos
+    - count = 0
     - @photos.each_slice(3) do |photos|
-      = render partial: "photos/row", as: :photos, object: photos
+      = render partial: "photos/row", as: :photos, object: photos, locals: { count: count }
+      - count += 1

@@ -10,6 +10,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails'
 gem 'therubyracer',  platforms: :ruby
 gem 'uglifier', '>= 1.3.0'
+gem "websocket-rails"
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
