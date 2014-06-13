@@ -1,4 +1,7 @@
-.row.photos-inner
+.row.photos-container
   - photos.each do |photo|
-    .col-md-4
-      = image_tag photo.url, class: "photo", "data-photo-rotation" => photo.rotation, "data-photo-id" => photo.id
+    .col-sm-4.photo-inner
+      .trimming
+        = image_tag photo.url, class: "photo", "data-photo-rotation" => photo.rotation, "data-photo-id" => photo.id
+      .pane
+        = photo.username

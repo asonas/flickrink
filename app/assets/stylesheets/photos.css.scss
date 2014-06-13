@@ -1,7 +1,33 @@
-.photos-inner {
+.container {
+  padding-top: 60px;
+}
+
+.photos-container {
   margin-bottom: 20px;
 
-  .photo {
-    width: 380px;
+  .photo-inner {
+    position: relative;
+    min-height: 240px;
+
+    .trimming {
+      width: 360px;
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .photo {
+      width: 360px;
+    }
+
+    .pane {
+      position: absolute;
+      bottom: 0;
+      padding: 10px 5px;
+      width: 360px;
+
+      color: #fff;
+      background-color: rgba(80, 80, 80, 0.6);
+      letter-spacing: 0.2em;
+    }
   }
 }
