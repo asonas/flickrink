@@ -19,6 +19,16 @@
       overflow: hidden;
     }
 
+    .radius {
+      border-radius: 5px;
+    }
+
+    .radius-bottom {
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+
     .photo {
       width: 360px;
     }
