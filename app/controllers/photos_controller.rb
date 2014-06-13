@@ -20,6 +20,14 @@ class PhotosController < ApplicationController
     render json: { message: :success }
   end
 
+  def zoomin
+    photo = Photo.find_by(id: params[:photo_id])
+
+    WebsocketRails[:streaming].trigger "zoomIn", { html: render_to_string(partial: "photos/panel", locals: { photo: photo }) }
+
+    render json: { message: :success }
+  end
+
   private
     def sanitize
       return nil unless (1..9).include? params[:position].to_i

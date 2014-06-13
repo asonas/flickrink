@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "photos#index"
   resources :photos, only: %i(index) do
     get :replace, on: :collection
+    get :zoomin
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

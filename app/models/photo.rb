@@ -33,7 +33,7 @@ class Photo < ActiveRecord::Base
         secret: photo.secret,
         owner_id: photo.owner.nsid,
         username: photo.owner.username,
-        description: photo.title,
+        title: photo.title,
         description: photo.description,
         url: url
       )

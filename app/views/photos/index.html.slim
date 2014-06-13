@@ -4,3 +4,7 @@
     - @photos.each_slice(3) do |photos|
       = render partial: "photos/row", as: :photos, object: photos, locals: { count: count }
       - count += 1
+
+.barrier.hidden
+.photo-panel.radius.js-panel-container.hidden
+  .close.glyphicon.glyphicon-remove-circle.js-close

@@ -2,6 +2,7 @@
   - photos.each_with_index do |photo, index|
     - index += 1
     .col-sm-4.photo-inner.js-photo-inner
+      span.glyphicon.glyphicon-zoom-in.zoom-in.js-zoom-in.clickable
       .trimming.radius.clickable.js-replace-photo
         = image_tag photo.url, class: "photo", "data-photo-rotation" => photo.rotation, "data-photo-id" => photo.id, "data-position" => index + (count * 3)
       .pane.radius-bottom.js-username
