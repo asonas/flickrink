@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20140611100040) do
 
   create_table "photos", force: true do |t|
-    t.integer  "flickr_photo_id"
+    t.string   "flickr_photo_id"
     t.integer  "server_id"
     t.integer  "rotation"
     t.string   "secret"

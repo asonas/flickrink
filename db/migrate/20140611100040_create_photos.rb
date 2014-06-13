@@ -1,7 +1,7 @@
 class CreatePhotos < ActiveRecord::Migration
   def change
     create_table :photos do |t|
-      t.integer :flickr_photo_id, unique: true
+      t.string :flickr_photo_id, unique: true # pg でbigint的なのにしたい　
       t.integer :server_id
       t.integer :rotation
       t.string :secret
