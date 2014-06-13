@@ -15,7 +15,7 @@ class PhotosController < ApplicationController
     sanitize
     photo = Photo.all.sample
 
-    WebsocketRails[:streaming].trigger "replace", { url: photo.url, username: photo.username, position: params[:position] }
+    WebsocketRails[:streaming].trigger "replace", { url: photo.url, photo_id: photo.id, username: photo.username, position: params[:position] }
 
     render json: { message: :success }
   end
