@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "photos#index"
   resources :photos, only: %i(index) do
     get :replace, on: :collection
   end
