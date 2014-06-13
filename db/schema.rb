@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140611100040) do
     t.string   "secret"
     t.string   "owner_id"
     t.string   "username"
+    t.text     "title"
     t.text     "description"
     t.string   "url"
     t.datetime "created_at"
